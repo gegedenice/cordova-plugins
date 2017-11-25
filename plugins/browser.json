@@ -13,9 +13,6 @@
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "com.notrestartup.cordovaplugins"
     },
-    "cordova-plugin-barcodescanner": {
-      "PACKAGE_NAME": "com.notrestartup.cordovaplugins"
-    },
     "cordova-plugin-device-orientation": {
       "PACKAGE_NAME": "com.notrestartup.cordovaplugins"
     },
@@ -24,11 +21,10 @@
     },
     "cordova-plugin-ezar-videooverlay": {
       "PACKAGE_NAME": "com.notrestartup.cordovaplugins"
-    }
-  },
-  "dependent_plugins": {
-    "cordova-plugin-compat": {
+    },
+    "cordova-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.notrestartup.cordovaplugins"
     }
-  }
+  },
+  "dependent_plugins": {}
 }

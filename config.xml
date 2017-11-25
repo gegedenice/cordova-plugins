@@ -1,24 +1,26 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.notrestartup.cordovaplugins" version="1.0.0">
-  <name>cordova-plugins</name>
-  <description>
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.notrestartup.cordovaplugins" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>cordova-plugins</name>
+    <description>
         A blank PhoneGap app.
     </description>
-  <author email="support@phonegap.com" href="http://phonegap.com">
+    <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
     </author>
-  <content src="index.html"/>
-  <access origin="*"/>
-  <engine name="browser" spec="~5.0.1"/>
-  <config-file xmlns:android="http://schemas.android.com/apk/res/android" mode="merge" parent="/*" target="AndroidManifest.xml">
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:name="android.hardware.camera"/>
-    <uses-feature android:name="android.hardware.camera.autofocus"/>
-  </config-file>
-  <plugin name="cordova-plugin-globalization" source="npm"/>
-  <plugin name="cordova-plugin-camera" spec="~3.0.0"/>
-  <plugin name="cordova-plugin-barcodescanner" spec="~0.7.3"/>
-  <plugin name="cordova-plugin-device-orientation" spec="~1.0.7"/>
-  <plugin name="cordova-plugin-geolocation" spec="~3.0.0"/>
-  <plugin name="cordova-plugin-ezar-videooverlay" spec="~1.0.0"/>
+    <content src="index.html" />
+    <access origin="*" />
+    <engine name="browser" spec="~5.0.1" />
+    <config-file mode="merge" parent="/*" target="AndroidManifest.xml" xmlns:android="http://schemas.android.com/apk/res/android">
+        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-feature android:name="android.hardware.camera" />
+        <uses-feature android:name="android.hardware.camera.autofocus" />
+    </config-file>
+    <plugin name="cordova-plugin-globalization" source="npm" />
+    <plugin name="cordova-plugin-camera" spec="~3.0.0" />
+    <plugin name="cordova-plugin-device-orientation" spec="~1.0.7" />
+    <plugin name="cordova-plugin-geolocation" spec="~3.0.0" />
+    <plugin name="cordova-plugin-ezar-videooverlay" spec="~1.0.0" />
+    <plugin name="cordova-plugin-barcodescanner" spec="^0.7.0" />
+    <engine name="android" spec="~6.3.0" />
+    <engine name="ios" spec="~4.5.4" />
 </widget>

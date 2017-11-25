@@ -27,9 +27,5 @@
       "PACKAGE_NAME": "com.notrestartup.cordovaplugins"
     }
   },
-  "dependent_plugins": {
-    "cordova-plugin-compat": {
-      "PACKAGE_NAME": "com.notrestartup.cordovaplugins"
-    }
-  }
+  "dependent_plugins": {}
 }

@@ -132,8 +132,7 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-  "cordova-plugin-compat": "1.2.0",
-  "cordova-plugin-barcodescanner": "0.7.3",
+  "cordova-plugin-barcodescanner": "0.7.0",
   "cordova-plugin-camera": "3.0.0",
   "cordova-plugin-device-orientation": "1.0.7",
   "cordova-plugin-ezar-videooverlay": "1.0.0",

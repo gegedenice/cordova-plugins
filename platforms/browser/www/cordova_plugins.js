@@ -117,22 +117,6 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-barcodescanner/www/barcodescanner.js",
-        "id": "cordova-plugin-barcodescanner.BarcodeScanner",
-        "pluginId": "cordova-plugin-barcodescanner",
-        "clobbers": [
-            "cordova.plugins.barcodeScanner"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-barcodescanner/www/barcodescanner.js",
-        "id": "cordova-plugin-barcodescanner.BarcodeScanner",
-        "pluginId": "cordova-plugin-barcodescanner",
-        "clobbers": [
-            "cordova.plugins.barcodeScanner"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-device-orientation/www/CompassError.js",
         "id": "cordova-plugin-device-orientation.CompassError",
         "pluginId": "cordova-plugin-device-orientation",
@@ -222,6 +206,14 @@ module.exports = [
         "pluginId": "cordova-plugin-ezar-videooverlay",
         "clobbers": [
             "camera"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-barcodescanner/www/barcodescanner.js",
+        "id": "cordova-plugin-barcodescanner.BarcodeScanner",
+        "pluginId": "cordova-plugin-barcodescanner",
+        "clobbers": [
+            "cordova.plugins.barcodeScanner"
         ]
     }
 ];
@@ -230,11 +222,10 @@ module.exports.metadata =
 {
     "cordova-plugin-globalization": "1.0.8",
     "cordova-plugin-camera": "3.0.0",
-    "cordova-plugin-barcodescanner": "0.7.3",
     "cordova-plugin-device-orientation": "1.0.7",
     "cordova-plugin-geolocation": "3.0.0",
     "cordova-plugin-ezar-videooverlay": "1.0.0",
-    "cordova-plugin-compat": "1.2.0"
+    "cordova-plugin-barcodescanner": "0.7.0"
 }
 // BOTTOM OF METADATA
 });

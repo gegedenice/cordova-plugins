@@ -15,14 +15,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-barcodescanner": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-barcodescanner"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-compat": {
     "source": {
       "type": "registry",
@@ -51,6 +43,14 @@
     "source": {
       "type": "registry",
       "id": "cordova-plugin-ezar-videooverlay"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-barcodescanner": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-barcodescanner@0.7.0"
     },
     "is_top_level": true,
     "variables": {}
