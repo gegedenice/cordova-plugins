@@ -10,15 +10,14 @@
   <content src="index.html"/>
   <access origin="*"/>
   <engine name="browser" spec="~5.0.1"/>
-  <config-file xmlns:android="http://schemas.android.com/apk/res/android" mode="merge" parent="/*" target="AndroidManifest.xml">
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:name="android.hardware.camera"/>
-    <uses-feature android:name="android.hardware.camera.autofocus"/>
-  </config-file>
   <plugin name="cordova-plugin-globalization" source="npm"/>
   <plugin name="cordova-plugin-camera" spec="~3.0.0"/>
   <plugin name="cordova-plugin-barcodescanner" spec="~0.7.3">
-  <param name="CAMERA_USAGE_DESCRIPTION" value="To scan barcodes." />
+  <config-file target="AndroidManifest.xml" parent="/*" mode="merge">
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+</config-file>
   </plugin>
   <plugin name="cordova-plugin-device-orientation" spec="~1.0.7"/>
   <plugin name="cordova-plugin-geolocation" spec="~3.0.0"/>
