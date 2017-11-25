@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+            <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, 
+            minimum-scale=1, width=device-width">
+            <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
+   <link rel="stylesheet" href="lib/jquery-ui-1.11.4/jquery-ui.min.css" />
+        <link rel="stylesheet" href="lib/jquerymobile/jquery.mobile.min.css" />
+        <link rel="stylesheet" href="lib/waves/waves.min.css" />
+        <link rel="stylesheet" href="lib/wow/animate.css" />
+        <link rel="stylesheet" href="css/nativedroid2.css" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+   <style>canvas { width: 100%; height: 100% }</style>
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />-->
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <title>cordovaplugins</title>
+</head>
+<body>
+<div data-role="page" id="index" data-fullscreen="true">
+<!-- cordova platform rm browser + cordova platform add browser -->
+ <div data-role="header" data-position="fixed" class="wow fadeIn" data-wow-delay="0.2s">
+                <h1 class="wow fadeIn" data-wow-delay='0.4s'>Plugins Cordova</h1>
+            </div>
+<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+            <ul data-role="listview" data-icon="false">
+                <li>
+                    <a href="#globalization">
+                        <h2>Globalization</h2>
+                        <p>cordova plugin add cordova-plugin-globalization</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#camera">
+                        <h2>Camera</h2>
+                        <p>cordova plugin add cordova-plugin-camera</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#barcode">
+                        <h2>Barcode Scanner</h2>
+                        <p>cordova plugin add cordova-plugin-barcodescanner (installe aussi cordova-plugin-compat)</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#ezarVideoOverlay">
+                        <h2>ezAR VideoOverlay</h2>
+                        <p>cordova plugin add cordova-plugin-ezar-videooverlay (ou cordova plugin add com.ezartech.ezar.videooverlay)</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#compassOrientation">
+                        <h2>Compass Orientation</h2>
+                        <p>cordova plugin add cordova-plugin-device-orientation</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#geolocation">
+                        <h2>Geolocation</h2>
+                        <p>cordova plugin add cordova-plugin-geolocation</p>
+                    </a>
+                </li>
+            </ul>
+            <button onclick="exitFromApp()" class="ui-btn ui-btn-raised clr-primary">Exit</button>
+</div>
+</div>
+<!--page globalization-->
+<div data-role="page" id="globalization">
+  <div data-role="header" data-position="fixed" class="wow fadeIn" data-add-back-btn="true">
+                <a data-rel="back" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-chevron-left"></i></a>
+                <h1 class="wow fadeIn" data-wow-delay='0.4s'>Globalization</h1>
+            </div>
+            <div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+<button id="getLocaleName" class="ui-btn ui-btn-raised clr-primary">Plugin Globalization example : LOCALE NAME</button>
+<div id="editLocaleName"></div>
+</div>
+</div>
+<!--page camera-->
+<div data-role="page" id="camera">
+  <div data-role="header" data-position="fixed" class="wow fadeIn" data-add-back-btn="true">
+                <a data-rel="back" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-chevron-left"></i></a>
+                <h1 class="wow fadeIn" data-wow-delay='0.4s'>Camera</h1>
+            </div>
+            <div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+<button id="getCamera" class="ui-btn ui-btn-raised clr-primary">Plugin Camera example</button>
+<div id="editImage"></div>
+</div>
+</div>
+<!--page barcode-->
+<div data-role="page" id="barcode">
+  <div data-role="header" data-position="fixed" class="wow fadeIn" data-add-back-btn="true">
+                <a data-rel="back" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-chevron-left"></i></a>
+                <h1 class="wow fadeIn" data-wow-delay='0.4s'>Barcode Scanner</h1>
+            </div>
+            <div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+<button id="getBarcode" class="ui-btn ui-btn-raised clr-primary">Plugin Barcode Scanner example</button>
+<div id="editBarcode"></div>
+</div>
+</div>
+<!--page ezar VideoOverlay-->
+<div data-role="page" id="ezarVideoOverlay">
+  <div data-role="header" data-position="fixed" class="wow fadeIn" data-add-back-btn="true">
+                <a data-rel="back" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-chevron-left"></i></a>
+                <h1 class="wow fadeIn" data-wow-delay='0.4s'>ezAR videoOverlay</h1>
+            </div>
+            <div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+<button id="getEzArVideoOverlay" class="ui-btn ui-btn-raised clr-primary">Plugin ezAR VideoOverlay example</button>
+<div id=""></div>
+</div>
+</div>
+<!--page compass orientation-->
+<div data-role="page" id="compassOrientation">
+  <div data-role="header" data-position="fixed" class="wow fadeIn" data-add-back-btn="true">
+                <a data-rel="back" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-chevron-left"></i></a>
+                <h1 class="wow fadeIn" data-wow-delay='0.4s'>Compass Orientation</h1>
+            </div>
+            <div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+<button id="getCompassOrientation" class="ui-btn ui-btn-raised clr-primary">Plugin Compass Orientation example</button>
+<div id="heading"></div>
+</div>
+</div>
+<!--page geolocation-->
+<div data-role="page" id="geolocation">
+  <div data-role="header" data-position="fixed" class="wow fadeIn" data-add-back-btn="true">
+                <a data-rel="back" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-chevron-left"></i></a>
+                <h1 class="wow fadeIn" data-wow-delay='0.4s'>Geolocation</h1>
+            </div>
+            <div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+<button id="getGeolocation" class="ui-btn ui-btn-raised clr-primary">Plugin Geolocation example</button>
+<div id="heading"></div>
+</div>
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+ <script src="lib/jquery/jquery-2.1.4.min.js"></script>
+        <script src="lib/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+        <script src="lib/jquerymobile/jquery.mobile-1.4.5.min.js"></script>
+        <script src="lib/waves/waves.min.js"></script>
+        <script src="js/nativedroid2.js"></script>
+        <script src="js/nd2settings.js"></script>
+        <script type="text/javascript" src="lib/three.js/three.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+function exitFromApp()
+       {
+            navigator.app.exitApp();
+       }
+    </script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
